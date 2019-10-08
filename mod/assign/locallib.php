@@ -3548,6 +3548,13 @@ class assign {
                 } else {
                     $fullname = fullname($student, has_capability('moodle/site:viewfullnames', $this->get_context()));
                     $prefix = str_replace('_', ' ', $groupname . $fullname);
+                    $prefix = $prefix . '=' . $student->email . '=';
+                    if(empty($student->idnumber)) {
+                      $idnumber = "";
+                    } else {
+                      $idnumber = $student->idnumber;
+                    }
+                    $prefix = $prefix . $idnumber;
                     $prefix = clean_filename($prefix . '_' . $this->get_uniqueid_for_user($userid));
                 }
 
