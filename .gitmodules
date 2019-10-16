@@ -1,0 +1,3 @@
+[submodule "filter/syntaxhighlighter"]
+	path = filter/syntaxhighlighter
+  url = https://github.com/sharpchi/moodle-filter_syntaxhighlighter.git 
